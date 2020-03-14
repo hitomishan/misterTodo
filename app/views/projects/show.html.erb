@@ -1,0 +1,7 @@
+<h1>deteil</h1>
+<ul>
+  <h3><%= @project.title %></h3>
+  <p><%= @project.content %></p>
+</ul>
+<%= link_to 'Edit', edit_project_path(@project)%>
+<%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: "削除してもよろしいですか？" }%>
