@@ -1,4 +1,7 @@
-<h1>projectのいちらんみれます。いずれ。。</h1>
+<h1>projectのいちらん。</h1>
+
 <% @projects.each do |project|%>
-  <ul><%= link_to project.title, project_path(project) %></ul>
+  <ul>
+    <%= link_to project.title, project_path(project) %>
+  </ul>
 <% end %>
