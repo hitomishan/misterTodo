@@ -1,0 +1,4 @@
+<h1>projectのいちらんみれます。いずれ。。</h1>
+<% @projects.each do |project|%>
+  <ul><%= link_to project.title, project_path(project) %></ul>
+<% end %>
