@@ -1,14 +1,2 @@
 <h1>プロジェクトへんしゅー</h1>
-  <%= form_for @project do |f|%>
-<p>
-  <%= f.label :title %>
-  <%= f.text_field :title%>
-</p>
-<p>
-  <%= f.label :content %>
-  <%= f.text_field :content%>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+<%= render partial: "shared/common_form" ,locals: {project: @project} %>

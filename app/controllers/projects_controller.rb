@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
     def create
       @project = Project.new(project_params)
       if @project.save
-        render :new
+        redirect_to projects_url
       else
       end
     end
@@ -25,15 +25,15 @@ class ProjectsController < ApplicationController
 
     def update
       @project = Project.find(params[:id])
-      if @project.update_attributes(project_params)
+      if @project.update(project_params)
         render :show
       else
       end
     end
 
     def destroy
-      Project.find(params[:id]).destroy
-        redirect_to projects_url
+      Project.find(params[:id]).destroy!
+      redirect_to projects_url
     end
 
     def project_params

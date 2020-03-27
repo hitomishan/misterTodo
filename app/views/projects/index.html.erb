@@ -1,7 +1,10 @@
 <h1>projectのいちらん。</h1>
+<h3><%= link_to "New", new_project_path %></h3>
+
 
 <% @projects.each do |project|%>
   <ul>
     <%= link_to project.title, project_path(project) %>
   </ul>
 <% end %>
+
